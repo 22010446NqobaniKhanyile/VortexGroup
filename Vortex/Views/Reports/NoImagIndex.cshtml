@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Vortex.Models.Report>
+
+@{
+    ViewBag.Title = "NoImagIndex";
+}
+
+
+
+<table class="table">
+    
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultTyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionalLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faultprgrss)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        
+    </tr>
+}
+
+</table>

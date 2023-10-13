@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "ChooseUpp";
+}
+
+
+<body>
+
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 homeMiddelContainers" style="background-color: lightgreen;">
+        <a href="@Url.Action("ReportNoImg", "Reports")" class="btn btn-default form-control homeLink">Report without Image[Click here]</a>
+    </div>
+    <br />
+    <br />
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 homeMiddelContainers" style="background-color: lightgreen;">
+        <a href="@Url.Action("Create", "Reports")" class="btn btn-default form-control homeLink">Report include Image[Click here]</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+        @Html.ActionLink("Back ", "StudentHomePage", "Home")
+    </div>
+
+
+
+</body>

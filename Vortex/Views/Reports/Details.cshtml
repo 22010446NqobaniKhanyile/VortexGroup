@@ -1,0 +1,98 @@
+﻿@model Vortex.Models.Report
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Report</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultTyp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultTyp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaultDescr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaultDescr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionalLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionalLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faultprgrss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faultprgrss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReportID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

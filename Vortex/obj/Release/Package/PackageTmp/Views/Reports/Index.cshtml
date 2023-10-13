@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Vortex.Models.Report>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    th {
+        color: white;
+        background-color: lightgreen;
+    }
+
+   
+</style>
+
+<h2>Reports     <p><a class="btn btn-default" href='@Url.Action("Index", "Points")'>Rewards &raquo;</a></p></h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultTyp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultDescr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OptionalLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faultprgrss)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultTyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionalLocation)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ImagePath)" width="150" height="150" multiple />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faultprgrss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "Edit", new { id=item.ReportID }, new { @class = "btn btn-sm btn-success" }) <p> </p> @Html.ActionLink("Remove", "Delete", new { id=item.ReportID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Vortex.Models.Report>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table">
+    <tr>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultTyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionalLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faultprgrss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "EditImage", new { id=item.ReportID }, new { @class = "btn btn-sm btn-success" }) 
+          <p></p>
+            @Html.ActionLink("Remove", "Delete", new { id=item.ReportID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

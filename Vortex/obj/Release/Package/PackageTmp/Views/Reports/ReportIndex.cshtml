@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Vortex.Models.Report>
+
+@{
+    ViewBag.Title = "Report Index";
+}
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultTyp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaultDescr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OptionalLocation)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Faultprgrss)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultTyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaultDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionalLocation)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Faultprgrss)
+        </td>
+        <td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+       
+    </tr>
+}
+
+</table>

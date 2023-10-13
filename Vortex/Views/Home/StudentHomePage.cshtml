@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "StudentHomePage";
+}
+
+<h2>Welcome Back</h2>
+<body>
+    <table class="table">
+        <tr>
+
+            <th>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 homeMiddelContainers">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/006/800/492/small/project-tracking-goal-tracker-task-completion-or-checklist-to-remind-project-progress-concept-businessman-project-manager-holding-big-pencil-to-check-completed-tasks-in-project-management-timeline-vector.jpg" class="img-responsive" style="margin: 0 auto" width="500" height="500">
+
+                    <a href="@Url.Action("TrackIndex", "Reports")" class="btn btn-default form-control homeLink">Track progress</a>
+                </div>
+                
+            </th>
+            <th>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 homeMiddelContainers">
+                    <img src="https://management30.com/wp-content/uploads/2021/05/module-rewards-incentives.png" class="img-responsive" style="margin: 0 auto" width="500" height="500">
+
+                    <a href="@Url.Action("RewardPic", "Points")" class="btn btn-default form-control homeLink">Rewards</a>
+                </div>
+            </th>
+        </tr>
+        <div>
+
+
+
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 homeMiddelContainers">
+                <img src="https://www.weblinxinc.com/images/website-maintenance.jpg" class="img-responsive" style="margin: 0 auto" width="500" height="500">
+
+                <a href="@Url.Action("ChooseUpp", "Reports")" class="btn btn-default form-control homeLink">Report</a>
+            </div>
+            <h4 style="background-color: lightgreen;">"Together we can make campus a better place to be" </h4>
+            <p>>>Report fault</p>
+            <p>>>Track progress</p>
+            <p>>>Get rewards</p>
+        </div>
+        </table>
+</body>

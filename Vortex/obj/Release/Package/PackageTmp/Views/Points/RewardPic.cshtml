@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Vortex.Models.Points>
+
+@{
+    ViewBag.Title = "RewardPic";
+}
+
+<h2>My Rewards</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Report.FaultTyp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Point)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reward)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Report.FaultTyp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Point)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reward)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+
+        </tr>
+    }
+    <h6 style="color:red;"> NB: IF THE IS NO RECORD THIS MEANS THE IS NO REWARDS ALLOCATED TO YOU YET !! </h6>
+
+</table>
+
+
+<div>
+    @Html.ActionLink("Back home", "StudentHomePage", "Home")
+</div>
